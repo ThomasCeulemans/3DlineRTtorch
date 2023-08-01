@@ -1,10 +1,10 @@
 import torch
 import torch.utils.benchmark as benchmark
 
-N = 3000000
-addlen = 10
-device = 'cpu'
-data = torch.randn(10*N, device=device)
+N = 100000
+addlen = 50
+device = 'cuda'
+data = torch.randn(addlen*N, device=device)
 #data that will be added every 10 indices
 ##scatter_add
 def scatter_add_test(data):
